@@ -7,20 +7,34 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   const searchInput = document.getElementById("search");
-  if (searchInput) {
-    searchInput.addEventListener("input", (e) => {
-      const val = e.target.value.toLowerCase();
-      const sections = document.querySelectorAll("section");
+  const searchBtn = document.getElementById("search-btn");
+  const clearBtn = document.getElementById("clear-btn");
+  const sections = document.querySelectorAll("section");
+
+  if (searchBtn) {
+    searchBtn.addEventListener("click", () => {
+      const val = searchInput.value.toLowerCase().trim();
       sections.forEach((sec) => {
         sec.style.display = "none";
       });
-      if (val.includes("beach"))
+      if ("beach".includes(val) && val) {
         document.getElementById("beach").style.display = "block";
-      if (val.includes("temple"))
+      }
+      if ("temple".includes(val) && val) {
         document.getElementById("temple").style.display = "block";
-      if (val.includes("japan") || val.includes("country"))
+      }
+      if ("country".includes(val) && val) {
         document.getElementById("country").style.display = "block";
-      if (!val) sections.forEach((sec) => (sec.style.display = "block"));
+      }
+    });
+  }
+
+  if (clearBtn) {
+    clearBtn.addEventListener("click", () => {
+      searchInput.value = "";
+      sections.forEach((sec) => {
+        sec.style.display = "block";
+      });
     });
   }
 

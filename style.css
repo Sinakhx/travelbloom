@@ -6,29 +6,51 @@ body {
 }
 
 nav {
-  background-color: #008080; /* Teal */
+  background-color: #008080;
   color: white;
   padding: 15px;
   position: fixed;
   width: 100%;
   top: 0;
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
+  align-items: center;
+  box-sizing: border-box;
 }
 
-nav a {
+.nav-links a {
   color: white;
   margin: 0 20px;
   text-decoration: none;
   font-weight: bold;
 }
 
-nav a:hover {
+.nav-links a:hover {
   text-decoration: underline;
 }
 
+.search-container input {
+  padding: 8px;
+  font-size: 16px;
+  width: 200px;
+}
+
+.search-container button {
+  background-color: #ff4500; /* Orange */
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  margin-left: 5px;
+  cursor: pointer;
+}
+
+.search-container button:hover {
+  background-color: #cc3700;
+}
+
 .hero {
-  background: url("https://cdn.pixabay.com/photo/2023/02/04/16/29/boat-7767575_960_720.jpg") no-repeat center/cover;
+  background: url("https://cdn.pixabay.com/photo/2023/02/04/16/29/boat-7767575_960_720.jpg")
+    no-repeat center/cover;
   height: 400px;
   display: flex;
   flex-direction: column;
@@ -61,14 +83,6 @@ nav a:hover {
   background-color: #cc3700;
 }
 
-#search {
-  display: block;
-  margin: 20px auto;
-  width: 50%;
-  padding: 10px;
-  font-size: 18px;
-}
-
 #social {
   text-align: center;
   margin: 20px;
@@ -88,9 +102,13 @@ section {
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
-section img {
-  width: 45%;
-  margin: 10px;
+.rec-item {
+  margin-bottom: 20px;
+}
+
+.rec-item img {
+  width: 100%;
+  max-width: 400px;
   border-radius: 8px;
 }
 
@@ -110,7 +128,7 @@ form label {
 
 form input,
 form textarea {
-  width: 95%;
+  width: 100%;
   padding: 10px;
   margin-bottom: 10px;
 }
