@@ -1,0 +1,128 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  background-color: #f4f4f4;
+  color: #333;
+}
+
+nav {
+  background-color: #008080; /* Teal */
+  color: white;
+  padding: 15px;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  display: flex;
+  justify-content: center;
+}
+
+nav a {
+  color: white;
+  margin: 0 20px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+.hero {
+  background: url("https://cdn.pixabay.com/photo/2023/02/04/16/29/boat-7767575_960_720.jpg") no-repeat center/cover;
+  height: 400px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  margin-top: 50px; /* Offset for fixed nav */
+}
+
+.hero h1 {
+  font-size: 48px;
+  margin: 0;
+}
+
+.hero p {
+  font-size: 24px;
+}
+
+.hero button {
+  background-color: #ff4500; /* Orange */
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  margin-top: 20px;
+  cursor: pointer;
+}
+
+.hero button:hover {
+  background-color: #cc3700;
+}
+
+#search {
+  display: block;
+  margin: 20px auto;
+  width: 50%;
+  padding: 10px;
+  font-size: 18px;
+}
+
+#social {
+  text-align: center;
+  margin: 20px;
+}
+
+#social a {
+  margin: 0 10px;
+  color: #008080;
+  text-decoration: none;
+}
+
+section {
+  margin: 40px;
+  padding: 20px;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+section img {
+  width: 45%;
+  margin: 10px;
+  border-radius: 8px;
+}
+
+form {
+  max-width: 600px;
+  margin: 80px auto;
+  padding: 20px;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+form label {
+  display: block;
+  margin: 10px 0 5px;
+}
+
+form input,
+form textarea {
+  width: 95%;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+form button {
+  background-color: #008080;
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+}
+
+form button:hover {
+  background-color: #006666;
+}
